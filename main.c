@@ -6,7 +6,8 @@ int	main()
 	init();
 	struct Point pos = position();
 	printf("Posição: %d, %d\n", pos.x, pos.y);
-	move(10, 10);
+	move(50, 50);
+	write("liedson");
 	click();
 	return 0;
 }
