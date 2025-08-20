@@ -9,8 +9,6 @@ CFLAGS = -std=c11 -Wall
 LDFLAGS_CPP = -lX11 -lXtst 
 LDFLAGS_C = -lX11 -lXtst
 
-SHELL := /bin/bash
-
 PROFILE := $(shell \
 	if [ -n "$$ZSH_VERSION" ]; then echo "$(HOME)/.zshrc"; \
 	elif [ -n "$$BASH_VERSION" ]; then echo "$(HOME)/.bashrc"; \
@@ -41,7 +39,7 @@ setup-env:
 	@echo '' >> $(PROFILE)
 	@echo '# ===== Configuração libcautogui =====' >> $(PROFILE)
 	@echo 'export C_INCLUDE_PATH=$$HOME/.local/include:$$C_INCLUDE_PATH' >> $(PROFILE)
-	@echo 'export CPLUS_INCLUDE_PATH=$$HOME/.local/include:$$CPLUS_INCLUDE_PATH' >> $(PROFILE)/.zshrc
+	@echo 'export CPLUS_INCLUDE_PATH=$$HOME/.local/include:$$CPLUS_INCLUDE_PATH' >> $(PROFILE)
 	@echo 'export LIBRARY_PATH=$$HOME/.local/lib:$$LIBRARY_PATH' >> $(PROFILE)
 	@echo 'export LD_LIBRARY_PATH=$$HOME/.local/lib:$$LD_LIBRARY_PATH' >> $(PROFILE)
 	@echo '# ====================================' >> $(PROFILE)
