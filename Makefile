@@ -57,7 +57,7 @@ install-user: all
 	cp libcautogui_c.a $(HOME)/.local/lib/
 	cp libcautogui_cpp.a $(HOME)/.local/lib/
 	cp cautogui.h cautogui.hpp $(HOME)/.local/include/
-	setup-env
+	make setup-env
 
 install: all
 	mkdir -p $(DESTDIR)$(LIBDIR)
@@ -65,7 +65,7 @@ install: all
 	cp libcautogui_c.a $(DESTDIR)$(LIBDIR)/
 	cp libcautogui_cpp.a $(DESTDIR)$(LIBDIR)/
 	cp cautogui.h cautogui.hpp $(DESTDIR)$(INCLUDEDIR)/
-	setup-env
+	make setup-env
 
 clean:
 	rm -f *.o *.a test_cpp test_c
